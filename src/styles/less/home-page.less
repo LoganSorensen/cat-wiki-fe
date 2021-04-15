@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   border-radius: 42px 42px 0 0;
-  overflow: hidden;
+  z-index: 1;
+  background: url(../assets/HeroImagelg.png);
 
   img {
     position: absolute;
@@ -31,6 +32,7 @@
     color: white;
     font-size: 2.4rem;
     margin-bottom: 5rem;
+    width: 37rem;
   }
 
   form {
@@ -38,6 +40,7 @@
     display: flex;
     align-items: center;
     width: 39rem;
+    margin-bottom: 1.7rem;
 
     input {
       width: 100%;
@@ -59,6 +62,31 @@
 
     path {
       fill: @brown;
+    }
+  }
+
+  #cats-dropdown {
+    display: none;
+    position: absolute;
+    height: 22rem;
+    width: 39rem;
+    overflow-y: scroll;
+    background-color: white;
+    border-radius: 24px;
+    padding: 1rem;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .breed-opt {
+      padding: 1em;
+      border-radius: 12px;
+      font-size: 1.8rem;
+      cursor: pointer;
+      &:hover {
+        background: rgba(151, 151, 151, 0.1);
+
+      }
     }
   }
 }

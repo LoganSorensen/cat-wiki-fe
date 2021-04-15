@@ -132,3 +132,195 @@ table {
 html {
   font-size: 62.5%;
 }
+*,
+html {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_ZpC7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_bZF7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE7g4.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Mystery Quest';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/mysteryquest/v10/-nF6OG414u0E6k0wynSGlujRHwE.ttf) format('truetype');
+}
+body {
+  padding: 3em 12em 0;
+}
+a {
+  text-decoration: none;
+}
+.header {
+  margin-bottom: 4em;
+}
+.footer {
+  margin: 0 auto;
+  padding: 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 1.8rem;
+  border-radius: 42px 42px 0 0;
+}
+.footer svg {
+  margin-left: 3em;
+}
+.footer path {
+  fill: white;
+}
+.footer p {
+  font-weight: 400;
+}
+.footer a {
+  color: white;
+  font-weight: 700;
+  text-decoration: underline;
+}
+.splash-img {
+  position: relative;
+  width: 100%;
+  border-radius: 42px 42px 0 0;
+  overflow: hidden;
+}
+.splash-img img {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.splash-img .content-padding {
+  width: 100%;
+  height: 100%;
+  padding: 11rem;
+  padding-bottom: 15rem;
+}
+.splash-img .logo {
+  width: 30rem;
+  height: auto;
+  margin-bottom: 1.2rem;
+}
+.splash-img path {
+  fill: white;
+}
+.splash-img p {
+  color: white;
+  font-size: 2.4rem;
+  margin-bottom: 5rem;
+}
+.splash-img form {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 39rem;
+}
+.splash-img form input {
+  width: 100%;
+  padding: 2.3rem;
+  border: none;
+  border-radius: 59px;
+  font-size: 1.8rem;
+  color: #291507;
+}
+.splash-img form input::placeholder {
+  color: #291507;
+}
+.splash-img form svg {
+  position: absolute;
+  left: 88%;
+  font-size: 1.7rem;
+}
+.splash-img form path {
+  fill: #291507;
+}
+.discover {
+  background-color: #e3e1dc;
+  width: 100%;
+  border-radius: 0 0 42px 42px;
+  padding: 11rem;
+  margin-bottom: 10rem;
+}
+.discover .see-more {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 4.6rem;
+}
+.discover p {
+  color: #291507;
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+.discover hr {
+  border: none;
+  border-top: 3px solid #291507;
+  width: 6rem;
+  margin: 0;
+  margin-bottom: 3.6rem;
+}
+.discover h2 {
+  color: #291507;
+  font-size: 4.8rem;
+  font-weight: 700;
+  width: 53rem;
+}
+.discover a {
+  color: rgba(41, 21, 7, 0.6);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.discover .cat-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  position: relative;
+}
+.discover .cat-images .accent-rect {
+  position: absolute;
+  top: 3.1em;
+  left: -1.5em;
+  width: 4.7rem;
+  height: 17.4rem;
+  background-color: #dec68b;
+  border-radius: 14px;
+}
+.discover .cat-images .cat {
+  z-index: 1;
+}
+.discover .cat-images .cat-image {
+  width: 22rem;
+  height: 22rem;
+  background-color: #291507;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+.discover .cat-images .cat-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #291507;
+}

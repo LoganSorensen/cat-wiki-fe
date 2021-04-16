@@ -1,5 +1,4 @@
 import React from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -11,7 +10,7 @@ const DiscoverSection = () => {
       <hr />
       <div className="see-more">
         <h2>66+ Breeds For you to discover</h2>
-        <Link to="/top-cats">
+        <Link className='see-more-link' to="/top-cats">
           SEE MORE <FontAwesomeIcon icon={faLongArrowAltRight} />
         </Link>
       </div>

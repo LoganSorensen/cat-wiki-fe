@@ -1,0 +1,45 @@
+.lower-content {
+  color: @brown;
+  padding: 0 10rem;
+  margin-bottom: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  hr {
+    margin-bottom: 2rem;
+    width: 6rem;
+  }
+
+  h2 {
+    font-size: 4.8rem;
+    font-weight: 700;
+    width: 45rem;
+    margin-bottom: 4rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    width: 40rem;
+    margin-bottom: 4.3rem;
+  }
+
+  .cat-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.7rem;
+  }
+
+  .cat-collage div {
+    display: grid;
+    grid-row-gap: 2.7rem;
+  }
+
+  .lower-image {
+    justify-self: end;
+    grid-column: 1/3;
+
+    grid-row: 2/4;
+  }
+}

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../assets/CatwikiLogo.svg";
-// import CatImg from "../assets/HeroImagelg.png";
 
 const SearchCats = (props) => {
   const [query, setQuery] = useState("");
@@ -14,10 +14,6 @@ const SearchCats = (props) => {
     filterBreeds();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
-
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +31,10 @@ const SearchCats = (props) => {
     dropDown.style.display = "block";
   };
 
-  const searchBlur = () => {
+  const searchBlur = (e) => {
+    const dropDown = document.getElementById("cats-dropdown");
+    if (!e.currentTarget.contains(e.relatedTarget))
+      dropDown.style.display = "none";
   };
 
   const filterBreeds = () => {
@@ -45,12 +44,9 @@ const SearchCats = (props) => {
     setData(filteredBreeds);
   };
 
-  console.log(query);
-
   return (
     <div>
       <div className="splash-img">
-        {/* <img src={CatImg} alt="" /> */}
         <div className="content-padding">
           <Logo className="logo" />
           <p>Get to know more about your cat breed</p>
@@ -60,33 +56,42 @@ const SearchCats = (props) => {
               placeholder="Enter your breed"
               value={query}
               onFocus={searchFocus}
-              onBlur={searchBlur}
-              onChange={handleChange}
+              onChange={(e) => setQuery(e.target.value)}
             />
             <FontAwesomeIcon icon={faSearch} />
-            <div id="cats-dropdown">
+            <div
+              id="cats-dropdown"
+              tabIndex="0"
+              style={
+                query !== "" && data.length === 0
+                  ? { padding: "0" }
+                  : { padding: "1rem" }
+              }
+            >
               {query === ""
                 ? props.breeds.map((breed) => (
-                    <div
-                      key={breed.id}
-                      id={breed.id}
-                      name={breed.name}
-                      className="breed-opt"
-                      onClick={selectBreed}
-                    >
-                      {breed.name}
-                    </div>
+                    <Link to={`/breed/${breed.id}`} key={breed.id} tabIndex="0">
+                      <div
+                        id={breed.id}
+                        name={breed.name}
+                        className="breed-opt"
+                        onClick={selectBreed}
+                      >
+                        {breed.name}
+                      </div>
+                    </Link>
                   ))
                 : data.map((breed) => (
-                    <div
-                      key={breed.id}
-                      id={breed.id}
-                      name={breed.name}
-                      className="breed-opt"
-                      onClick={selectBreed}
-                    >
-                      {breed.name}
-                    </div>
+                    <Link to={`/breed/${breed.id}`} key={breed.id} tabIndex="0">
+                      <div
+                        id={breed.id}
+                        name={breed.name}
+                        className="breed-opt"
+                        onClick={selectBreed}
+                      >
+                        {breed.name}
+                      </div>
+                    </Link>
                   ))}
             </div>
           </form>

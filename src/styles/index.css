@@ -273,7 +273,8 @@ hr {
   display: none;
   position: absolute;
   top: 117%;
-  height: 22rem;
+  max-height: 22rem;
+  min-height: 0;
   width: 39rem;
   overflow-y: scroll;
   background-color: white;
@@ -282,6 +283,9 @@ hr {
 }
 .splash-img #cats-dropdown::-webkit-scrollbar {
   display: none;
+}
+.splash-img #cats-dropdown a {
+  color: black;
 }
 .splash-img #cats-dropdown .breed-opt {
   padding: 1em;

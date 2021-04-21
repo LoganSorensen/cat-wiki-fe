@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../assets/CatwikiLogo.svg";
 
 const SearchCats = (props) => {
   const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
+  // const history = useHistory();
 
   useEffect(() => {
     filterBreeds();
@@ -61,7 +62,6 @@ const SearchCats = (props) => {
             <FontAwesomeIcon icon={faSearch} />
             <div
               id="cats-dropdown"
-              tabIndex="0"
               style={
                 query !== "" && data.length === 0
                   ? { padding: "0" }
